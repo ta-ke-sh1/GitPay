@@ -10,7 +10,6 @@ namespace Payroll
             session_user = u;
             users = listUsers;
         }
-
         protected override void printMenu()
         {
             System.Console.WriteLine("--- --- --- --- --- --- -- User Menu -- --- --- --- --- --- ---");
@@ -22,18 +21,17 @@ namespace Payroll
             System.Console.WriteLine();
             System.Console.WriteLine("--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---");
         }
-
         protected override void doTask(string choice)
         {
             switch (choice)
             {
                 case "1":
                     Console.Clear();
-                    EditInformation();
+                    session_user.EditInformation();
                     break;
                 case "2":
                     Console.Clear();
-                    EditPassword();
+                    session_user.EditPassword();
                     break;
                 case "3":
                     Console.Clear();
@@ -49,38 +47,6 @@ namespace Payroll
                     System.Console.WriteLine("                       Invalid choice!");
                     System.Console.WriteLine("--- --- --- --- --- --- --- ---- --- --- --- --- --- --- --- ---");
                     break;
-            }
-        }
-
-        private void EditPassword(){
-            System.Console.WriteLine("Enter old password: ");
-            string pass = Console.ReadLine();
-            if(session_user.Login(session_user.Username,pass)){
-                System.Console.WriteLine("Enter new password: ");
-                string newPassword = Console.ReadLine();
-                session_user.Password = newPassword;
-                System.Console.WriteLine("Password changed!");
-            }
-            else{
-                System.Console.WriteLine("Wrong password!");
-            }
-        }
-
-        private void EditInformation()
-        {
-            System.Console.WriteLine("Enter old password: ");
-            string pass = Console.ReadLine();
-            if (session_user.Login(session_user.Username, pass))
-            {
-                System.Console.WriteLine("Enter your First Name: ");
-                session_user.FirstName = Console.ReadLine();
-                System.Console.WriteLine("Enter your Last Name: ");
-                session_user.LastName = Console.ReadLine();
-                System.Console.WriteLine("User information changed!");
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong password!");
             }
         }
     }
