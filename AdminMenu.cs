@@ -2,15 +2,15 @@ using System.IO;
 using System.Collections.Generic;
 using System;
 
-namespace Payroll
+namespace GitPay
 {
     public class AdminMenu : Menu
     {
-        Admin currUser;
+        Admin adm;
         public AdminMenu(User u, List<User> l, int currIndex)
         {
             ID = currIndex++;
-            currUser = new Admin(u);
+            adm = new Admin(u);
             users = l;
         }
         protected override void printMenu()
@@ -21,6 +21,9 @@ namespace Payroll
             System.Console.WriteLine("                        2. Edit User");
             System.Console.WriteLine("                       3. Delete User");
             System.Console.WriteLine("                      4. View all users");
+            System.Console.WriteLine();
+            System.Console.WriteLine("--- --- --- --- --- - Account  Management - --- --- --- --- --- ");
+            System.Console.WriteLine();
             System.Console.WriteLine("                      5. Edit Password");
             System.Console.WriteLine("                     6. Edit Information");
             System.Console.WriteLine("                       7. View salary");
@@ -35,31 +38,31 @@ namespace Payroll
             {
                 case "1":
                     Console.Clear();
-                    currUser.AddUser(users);
+                    AddUser(users);
                     break;
                 case "2":
                     Console.Clear();
-                    currUser.EditUser(users);
+                    adm.EditUser(users);
                     break;
                 case "3":
                     Console.Clear();
-                    currUser.DeleteUser(users);
+                    adm.DeleteUser(users);
                     break;
                 case "4":
                     Console.Clear();
-                    currUser.ViewAllUsers(users);
+                    adm.ViewAllUsers(users);
                     break;
                 case "5":
                     Console.Clear();
-                    currUser.EditPassword();
+                    adm.EditPassword(users, adm);
                     break;
                 case "6":
                     Console.Clear();
-                    currUser.EditInformation();
+                    adm.EditInformation(users, adm);
                     break;
                 case "7":
                     Console.Clear();
-                    currUser.PrintSalary();
+                    adm.PrintSalary();
                     break;
                 case "0":
                     OverrideTxt(users);
@@ -73,6 +76,39 @@ namespace Payroll
                     break;
             }
         }
-       
+
+        public void AddUser(List<User> users)
+        {
+            System.Console.WriteLine("--- --- --- --- --- --- --- ---- --- --- --- --- --- --- --- ---");
+            Console.Write("Enter the username          : ");
+            string username = Console.ReadLine();
+
+            Console.Write("Enter the password          : ");
+            string password = Console.ReadLine();
+
+            Console.Write("Enter the user's first name : ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Enter the user's last name  : ");
+            string lastName = Console.ReadLine();
+
+            string occupation = adm.GetOpt();
+
+            ID++;
+
+            switch (occupation)
+            {
+                case "Admin":
+                    users.Add(new Admin(ID, username, "0", firstName, lastName, occupation, 0, 0)); break;
+                case "Accountant":
+                    users.Add(new Accountant(ID, username, "0", firstName, lastName, occupation, 0, 0)); break;
+                case "Employee":
+                    users.Add(new Admin(ID, username, "0", firstName, lastName, occupation, 0, 0)); break;
+                case "Manager":
+                    users.Add(new Manager(ID, username, "0", firstName, lastName, occupation, 0, 0)); break;
+                default:
+                    users.Add(new Employee(ID, username, "0", firstName, lastName, occupation, 0, 0)); break;
+            }
+        }
     }
 }

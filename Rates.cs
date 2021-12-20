@@ -1,12 +1,13 @@
 using System.IO;
 using System;
 
-namespace Payroll
+namespace GitPay
 {
     public abstract class Rates
     {
-        private string[] ratesData = new string[3];
+        private string[] ratesData = new string[4];
         private string[] data;
+        public double CoefficientSalary { get; set; }
         public double BaseRate { get; set; }
         public double Tax { get; set; }
         public double Overtime { get; set; }
@@ -20,6 +21,7 @@ namespace Payroll
             BaseRate = Convert.ToDouble(ratesData[0]);
             Tax = Convert.ToDouble(ratesData[1]);
             Overtime = Convert.ToDouble(ratesData[2]);
+            CoefficientSalary = Convert.ToDouble(ratesData[3]);
         }
         public abstract string[] GetData();
     }

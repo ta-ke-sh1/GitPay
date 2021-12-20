@@ -1,11 +1,7 @@
-1;admin;root;Trung;Ha;Admin;160;20
-2;trungha;root;Phuong;Nguyen;Accountant;160;-40
-4;hoang;trung1;Hoang;Nguyen The;Employee;160;-13
-5;200443;123456;Duc;Trinh Minh;Employee;160;16
-6;200456;qwerty;Kien;Nguyen Hai;Employee;160;-20
-7;190271;redsho;Van;Tran;Employee;160;-40
+1;admin;trung;Trung;Ha;Admin;160;10
+4;hoang;trung1;Hoang;Nguyen The;Accountant;160;13
+5;200443;123456;Duc;Trinh Minh;Manager;100;0
+6;200456;qwerty;Kien;Nguyen Hai;Employee;149;0
+7;190271;redsho;Van;Tran;Employee;155;0
 8;180443;snappe;Ha;Nguyen Viet;Employee;160;20
 9;Trung;0;Trung;Ha The;Admin;160;20
-
-
-

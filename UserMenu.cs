@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace Payroll
+namespace GitPay
 {
     public class UserMenu : Menu
     {
@@ -27,11 +27,11 @@ namespace Payroll
             {
                 case "1":
                     Console.Clear();
-                    session_user.EditInformation();
+                    session_user.EditInformation(users, session_user);
                     break;
                 case "2":
                     Console.Clear();
-                    session_user.EditPassword();
+                    session_user.EditPassword(users, session_user);
                     break;
                 case "3":
                     Console.Clear();

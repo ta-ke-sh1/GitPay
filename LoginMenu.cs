@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 
-namespace Payroll
+namespace GitPay
 {
     public class LoginMenu : Menu
     {
@@ -109,7 +109,7 @@ namespace Payroll
                     break;
                 case "Manager":
                     Console.Clear();
-                    UserMenu managerMenu = new UserMenu(session_user, users);
+                    ManagerMenu managerMenu = new ManagerMenu(session_user, users);
                     managerMenu.Run();
                     break;
                 case "Employee":

@@ -5,22 +5,21 @@ using System.Text;
 
 namespace GitPay
 {
-    public class AccountantMenu : Menu
+    public class ManagerMenu : Menu
     {
-        Accountant acc;
-        public AccountantMenu(User u, List<User> l)
+        Manager manager;
+        public ManagerMenu(User u, List<User> l)
         {
-            acc = new Accountant(u);
+            manager = new Manager(u);
             users = l;
         }
-
         protected override void printMenu()
         {
             System.Console.WriteLine("--- --- --- --- --- -- Payroll Management -- --- --- --- --- ---");
             System.Console.WriteLine();
             System.Console.WriteLine("                     1. View all Payrolls");
-            System.Console.WriteLine("                      2. View Base Rates");
-            System.Console.WriteLine("                     3. Change Base Rates");
+            System.Console.WriteLine("                  2. Search Employee Payroll");
+            System.Console.WriteLine("                   3. Edit Employee Payroll");
             System.Console.WriteLine();
             System.Console.WriteLine("--- --- --- --- --- ---- Account Management ---- --- --- --- ---");
             System.Console.WriteLine();
@@ -39,15 +38,15 @@ namespace GitPay
                 case "1":
                     PrintAllPayrolls(); break;
                 case "2":
-                    acc.ViewBaseRate(); break;
+                    manager.SearchPayroll(users); break;
                 case "3":
-                    acc.ChangeBaseRate(); break;
+                    manager.EditPayroll(users); break;
                 case "4":
-                    acc.EditPassword(users, acc); break;
+                    manager.EditPassword(users, manager); break;
                 case "5":
-                    acc.EditInformation(users, acc); break;
+                    manager.EditInformation(users, manager); break;
                 case "6":
-                    acc.PrintSalary(); break;
+                    manager.PrintSalary(); break;
                 case "0":
                     OverrideTxt(users);
                     Console.Clear(); break;

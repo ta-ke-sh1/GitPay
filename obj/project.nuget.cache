@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iFYNJj6xSYGtxzivCjdRcesfF5+Rf/ZCJoHzxV4HxYKzWnvJZ1e711XM5+Z7N+Hm33+jADuG0WmhPknCsR0BDA==",
+  "dgSpecHash": "xrbKnshPW+5xkNEQubiQFx9A1TXsT6c+0h+cNUqmto14c0oOUH0EWoBhqBW/eFt3uUBHLyorAq8eUxnRdi6BiQ==",
   "success": true,
-  "projectFilePath": "E:\\Study\\Payroll\\Payroll.csproj",
+  "projectFilePath": "E:\\Study\\GitPayroll\\Payroll\\GitPay\\Payroll.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

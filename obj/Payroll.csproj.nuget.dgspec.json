@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Study\\Payroll\\Payroll.csproj": {}
+    "E:\\Study\\GitPayroll\\Payroll\\GitPay\\Payroll.csproj": {}
   },
   "projects": {
-    "E:\\Study\\Payroll\\Payroll.csproj": {
+    "E:\\Study\\GitPayroll\\Payroll\\GitPay\\Payroll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Study\\Payroll\\Payroll.csproj",
+        "projectUniqueName": "E:\\Study\\GitPayroll\\Payroll\\GitPay\\Payroll.csproj",
         "projectName": "Payroll",
-        "projectPath": "E:\\Study\\Payroll\\Payroll.csproj",
+        "projectPath": "E:\\Study\\GitPayroll\\Payroll\\GitPay\\Payroll.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Study\\Payroll\\obj\\",
+        "outputPath": "E:\\Study\\GitPayroll\\Payroll\\GitPay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

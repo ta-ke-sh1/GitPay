@@ -4,7 +4,7 @@ using System;
 using System.Text;
 
 
-namespace Payroll
+namespace GitPay
 {
     public abstract class Menu
     {
@@ -39,7 +39,8 @@ namespace Payroll
             for (int i = 0; i < userData.Length; i++)
             {
 
-                if(userData[i] == "" || userData[i] == " "){
+                if (userData[i] == "" || userData[i] == " ")
+                {
                     continue;
                 }
 
@@ -64,7 +65,7 @@ namespace Payroll
                 users.Add(session_user);
                 ID = Convert.ToInt32(data[0]);
             }
-        }    
+        }
         protected void OverrideTxt(List<User> users)
         {
             List<String> overrideData = new List<string>();
@@ -82,6 +83,16 @@ namespace Payroll
         public bool numericCheck(string source)
         {
             return true;
+        }
+        protected void PrintAllPayrolls()
+        {
+            System.Console.WriteLine();
+            System.Console.WriteLine("ID\tFName\tLName\tPos\tWHours\tTotal\tOver\tBonus\tTax\tFinal");
+            System.Console.WriteLine("--------------------------------------------------------------------------------");
+            foreach (User u in users)
+            {
+                u.PrintCompactSalary();
+            }
         }
 
         protected abstract void printMenu();

@@ -1,9 +1,9 @@
-﻿using System.IO;
-using System.Collections.Generic;
+﻿
+using System.Security.Cryptography;
 using System;
 using System.Text;
 
-namespace Payroll
+namespace GitPay
 {
     class Program
     {
@@ -12,7 +12,5 @@ namespace Payroll
             Menu m = new LoginMenu();
             m.Run();
         }
-
-        
     }
 }
